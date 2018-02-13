@@ -12,7 +12,7 @@ address this problem? Not really, anyone who is building a web application will
 likely face how to dictate "who can see what." It turns out this is a pretty 
 common problem.
 
-## Breaking down the Authentication and Authorization problem
+## Breaking Down the Authentication and Authorization Problem
 
 We can divide the "who can see what" problem into four smaller, but related 
 problems:
@@ -22,7 +22,7 @@ problems:
 - What are you allowed to do (i.e., Access Policy)
 - Mechanisms to enforce the Access Policy (i.e., Authorization)
 
-## Examples of Authentication and Authorization flows
+## Examples of Authentication and Authorization Flows
 
 Identification, Authentication, Access Policy and Authorization are security 
 concepts that equally apply to the physical and digital worlds. If you were to 
@@ -45,7 +45,7 @@ When you access your bank account on the web you will:
 4. Sprinkled throughout the web application, your bank will have checks to 
 enforce the Access Policy. You will not be allowed to alter your balance and add $1,000,000.
 
-## Defining key Authentication and Authorization terms
+## Defining Key Authentication and Authorization Terms
 
 We can define the four security concepts that help us answer the "who can see 
 what" questions as:
@@ -61,7 +61,7 @@ the resource being accessed and of the user requesting access.
 - **Authorization**: Access privileges granted to a user or the act of granting 
 those privileges.
 
-## Section objectives
+## Section Objectives
 
 Over the course of this section, you will learn how to build a basic 
 implementation of these four security concepts in a Ruby on Rails application.
