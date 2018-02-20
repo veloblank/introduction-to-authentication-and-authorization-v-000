@@ -6,16 +6,15 @@ Imagine you shared (by accident!) the URL to your bank’s web application. Woul
 you expect that anyone who followed the link should be able to see that you
 paid an extremely expensive (but organic) $9.50 on a Greenleaf Juice? We hope
 that you, like us, would find that an _extremely_ undesirable outcome!
-Thankfully that's not how bank web applications work, thankfully! But why is
-this so? Why can some URLs be followed to view a page (say the IMDB page of the
-1980 _magnum opus_ "[Flash Gordon][FG]") and have the same experience, but
-others cannot?
+Thankfully that's not how bank web applications work, thankfully!
 
-How are banks able to provide you full access to your account information while
-limiting what everyone else can see? Are banks the only entities that need to
-address this problem? Not really, anyone who is building a web application will
-likely face how to dictate "who can see what." It turns out this is a pretty
-common problem.
+But why is this so? Why can some URLs be followed to view a page (say the IMDB
+page of the 1980 _magnum opus_ "[Flash Gordon][FG]") and have the same
+experience, but others cannot?  How are banks able to provide you full access
+to your account information while limiting what everyone else can see? It turns
+out this is a pretty common problem which anyone who is building a web
+application will likely face. We'll be exploring this "who gets to see what"
+problem in this lesson.
 
 ## Breaking Down the Authentication and Authorization Problem
 
