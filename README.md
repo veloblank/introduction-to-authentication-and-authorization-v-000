@@ -3,54 +3,57 @@
 ![Sample bank account web interface](https://curriculum-content.s3.amazonaws.com/web-development/bank_account_sample.png)
 
 Imagine you shared (by accident!) the URL to your bank’s web application. Would
-you expect that anyone who followed the link should be able to see that you
-paid an extremely expensive (but organic) $9.50 on a Greenleaf Juice? We hope
-that you, like us, would find that an _extremely_ undesirable outcome!
-Thankfully that's not how bank web applications work, thankfully!
+you expect that **anyone** who followed the link should be able to see that you
+bought an extremely expensive $9.50 Greenleaf Juice? We susupect that you, like
+us, would find that an _extremely_ undesirable outcome! Thankfully that's
+**not** how bank web applications work!
 
-But why is this so? Why can some URLs be followed to view a page (say the IMDB
-page of the 1980 _magnum opus_ "[Flash Gordon][FG]") and have the same
+But why is this so? Why can _some_ URLs be followed to view a page (say, the
+IMDB page of the 1980 _magnum opus_ "[Flash Gordon][FG]") and have the same
 experience, but others cannot?  How are banks able to provide you full access
-to your account information while limiting what everyone else can see? It turns
-out this is a pretty common problem which anyone who is building a web
-application will likely face. We'll be exploring this "who gets to see what"
-problem in this lesson.
+to **your** account information while limiting what everyone else can see? This
+is a common problem that most anyone building a web application will face.
+We'll be exploring this "who gets to see what" problem in this lesson.
 
 ## Breaking Down the Authentication and Authorization Problem
 
 We can divide the "who can see what" problem into four smaller, but related
 problems:
 
-- Who are you (i.e. **Identification**)
-- Are you who you claim to be (i.e. **Authentication**)
-- What is a given _role_ allowed to do (i.e. **Access Policy**)
+- Who you claim to be (i.e. **Identification**)
+- Validation that you _are_ you who you claim to be (i.e. **Authentication**)
+  and association of _roles_ based on your identity
+- What are given _roles_ allowed to do (i.e. **Access Policy**)
 - Mechanisms to enforce the Access Policy (i.e. **Authorization**)
 
 ## Examples of Authentication and Authorization Flows
 
 **Identification**, **Authentication**, **Access Policy** and **Authorization**
 are security concepts that apply equally to the physical and digital worlds. If
-you were to enter your local bank branch they would verify:
+you were to enter your local bank branch, here's how these concepts would
+apply.
 
 1. Assert who you are by stating your name and showing an ID
    (**Identification**)
 2. Verify your identity claim by verifying you possess a secret that only the
-   "real you" would know and which had been established prior to this moment.
+   "real you" would know and which has been established prior to this moment.
    This might be a password, matching signature, [knowledge of bedroom furniture][odyssey],   etc. (**Authentication**)
 3. _Interlude_ At this point the bank knows that they are dealing with a
    _verified entity_. From the perspective of their system, all _verified
-   entities_ act with respect to a _role_. _Roles_ can be expressed with the
-   formulation _As an_. Implicitly, at point of **Authentication** your
-   collection of _roles_ is also retrived.
+   entities_ act with respect to _roles_. At point of **Authentication** the
+   _verified entity's_ collection of _roles_ is _also_ retrived.
 4. You then proceed to withdraw enough money for another delicious Greenleaf
-   juice. At this point the **Access Policy** ("_As an_ +owner+ of an account,
-   the +owner+ is permitted to withdraw money from that account provided that the
+   juice. At this point the **Access Policy** ("_As an_ `owner` of an account,
+   the `owner` is permitted to withdraw money from that account provided that the
    amount to withdraw does not reduce the balance to $0.00 or less") is
-   implemented in an activity known as **Authorization**.
-5. You then walk up to the vault and try to go in. Your _roles_ +owner+ and
-   +customer+ have a "NO ACCESS" policy as relates to the bank's vault. As
-   such, you will _not_ be **Authorized** and will probably earn the new role of
-   +attempted robber+.
+   implemented in an activity known as **Authorization**. Since your
+   authentication step validated you in the role of `owner`, this transaction
+   proceeds (provided you have enough money to cover that delicious, organic
+   juice!).
+5. You then walk up to the vault and try to go in. Your _roles_ `owner` and
+   `customer` have a "NO ACCESS" **Access Policy** as relates to the bank's vault. As
+   such, you will _not_ be **Authorized** and cannot enter the vault (and will
+   probably earn the new role of `attempted robber`).
 
 Let's apply this thinking to a web login.
 
