@@ -19,7 +19,7 @@ common problem.
 
 ## Breaking Down the Authentication and Authorization Problem
 
-We can divide the "who can see what" problem into four smaller, but related 
+We can divide the "who can see what" problem into four smaller, but related
 problems:
 
 - Who are you (i.e., Identification)
@@ -29,44 +29,46 @@ problems:
 
 ## Examples of Authentication and Authorization Flows
 
-Identification, Authentication, Access Policy and Authorization are security 
-concepts that equally apply to the physical and digital worlds. If you were to 
+Identification, Authentication, Access Policy and Authorization are security
+concepts that equally apply to the physical and digital worlds. If you were to
 enter your local bank branch they would verify:
 
 1. Who you are by asking your name. (Identification)
 2. They would verify your identity claim by checking a form of I.D. (Authentication)
-3. They would verify what type of access you have. Are you allowed to withdraw 
+3. They would verify what type of access you have. Are you allowed to withdraw
 money? (Access Policy)
-4. They would enforce the policy using security guards. You might be allowed to 
-withdraw money from your account via a teller, but you are not allowed to walk 
+4. They would enforce the policy using security guards. You might be allowed to
+withdraw money from your account via a teller, but you are not allowed to walk
 into the safe and collect the money yourself. (Authorization)
 
 When you access your bank account on the web you will:
 
 1. Enter a username. That is an identity claim. (Identification)
-2. Enter a password. You are providing proof of your identity claim. 
+2. Enter a password. You are providing proof of your identity claim.
 (Authentication)
 3. You will be granted certain privileges based on your identity. (Access Policy)
-4. Sprinkled throughout the web application, your bank will have checks to 
+4. Sprinkled throughout the web application, your bank will have checks to
 enforce the Access Policy. You will not be allowed to alter your balance and add $1,000,000.
 
 ## Defining Key Authentication and Authorization Terms
 
-We can define the four security concepts that help us answer the "who can see 
+We can define the four security concepts that help us answer the "who can see
 what" questions as:
 
-- **Identification**: Obtaining and identity claim from the user. (e.g., my 
+- **Identification**: Obtaining and identity claim from the user. (e.g., my
 email is,  my name is)
 
-- **Authentication**: The process of verifying the identity claim of a user. 
+- **Authentication**: The process of verifying the identity claim of a user.
 
-- **Access Policy**: An access policy based on the identities and attributes of 
+- **Access Policy**: An access policy based on the identities and attributes of
 the resource being accessed and of the user requesting access.
 
-- **Authorization**: Access privileges granted to a user or the act of granting 
+- **Authorization**: Access privileges granted to a user or the act of granting
 those privileges.
 
 ## Section Objectives
 
-Over the course of this section, you will learn how to build a basic 
+Over the course of this section, you will learn how to build a basic
 implementation of these four security concepts in a Ruby on Rails application.
+
+[FG]: http://www.imdb.com/title/tt0080745/
