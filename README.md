@@ -56,28 +56,26 @@ Let's apply this thinking to a web login.
 
 When you access your bank account on the web you will:
 
-1. Enter a username. That is an identity claim. (Identification)
+1. Enter a username. That is an identity claim. (**Identification**)
 2. Enter a password. You are providing proof of your identity claim.
-(Authentication)
-3. You will be granted certain privileges based on your identity. (Access Policy)
-4. Sprinkled throughout the web application, your bank will have checks to
-enforce the Access Policy. You will not be allowed to alter your balance and add $1,000,000.
+   (**Authentication**)
+3. You will be granted certain privileges based on your identity. (**Access Policy**)
+4. Sprinkled throughout the web application, your bank will have checks
+   (**Authorization** events) to enforce the **Access Policy.** You will not be
+   allowed to alter your balance and add $1,000,000.
 
 ## Defining Key Authentication and Authorization Terms
 
 We can define the four security concepts that help us answer the "who can see
 what" questions as:
 
-- **Identification**: Obtaining and identity claim from the user. (e.g., my
-email is,  my name is)
-
-- **Authentication**: The process of verifying the identity claim of a user.
-
-- **Access Policy**: An access policy based on the identities and attributes of
-the resource being accessed and of the user requesting access.
-
-- **Authorization**: Access privileges granted to a user or the act of granting
-those privileges.
+* **Identification**: Obtaining and identity claim from the user. (e.g., my
+  email is,  my name is)
+* **Authentication**: The process of verifying the identity claim of a user.
+* **Access Policy**: An access policy based on the identities and attributes of
+  the resource being accessed and of the user requesting access.
+* **Authorization**: Access privileges granted to a user or the act of granting
+  those privileges.
 
 ## Section Objectives
 
