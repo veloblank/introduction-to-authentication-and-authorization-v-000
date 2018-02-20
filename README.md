@@ -21,10 +21,10 @@ problem in this lesson.
 We can divide the "who can see what" problem into four smaller, but related
 problems:
 
-- Who are you (i.e., Identification)
-- Are you who you claim to be (i.e., Authentication)
-- What are you allowed to do (i.e., Access Policy)
-- Mechanisms to enforce the Access Policy (i.e., Authorization)
+- Who are you (i.e. **Identification**)
+- Are you who you claim to be (i.e. **Authentication**)
+- What are you allowed to do (i.e. **Access Policy**)
+- Mechanisms to enforce the Access Policy (i.e. **Authorization**)
 
 ## Examples of Authentication and Authorization Flows
 
