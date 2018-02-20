@@ -28,9 +28,9 @@ problems:
 
 ## Examples of Authentication and Authorization Flows
 
-Identification, Authentication, Access Policy and Authorization are security
-concepts that equally apply to the physical and digital worlds. If you were to
-enter your local bank branch they would verify:
+**Identification**, **Authentication**, **Access Policy** and **Authorization**
+are security concepts that apply equally to the physical and digital worlds. If
+you were to enter your local bank branch they would verify:
 
 1. Who you are by asking your name. (Identification)
 2. They would verify your identity claim by checking a form of I.D. (Authentication)
