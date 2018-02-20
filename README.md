@@ -23,7 +23,7 @@ problems:
 
 - Who are you (i.e. **Identification**)
 - Are you who you claim to be (i.e. **Authentication**)
-- What are you allowed to do (i.e. **Access Policy**)
+- What is a given _role_ allowed to do (i.e. **Access Policy**)
 - Mechanisms to enforce the Access Policy (i.e. **Authorization**)
 
 ## Examples of Authentication and Authorization Flows
@@ -32,13 +32,27 @@ problems:
 are security concepts that apply equally to the physical and digital worlds. If
 you were to enter your local bank branch they would verify:
 
-1. Who you are by asking your name. (Identification)
-2. They would verify your identity claim by checking a form of I.D. (Authentication)
-3. They would verify what type of access you have. Are you allowed to withdraw
-money? (Access Policy)
-4. They would enforce the policy using security guards. You might be allowed to
-withdraw money from your account via a teller, but you are not allowed to walk
-into the safe and collect the money yourself. (Authorization)
+1. Assert who you are by stating your name and showing an ID
+   (**Identification**)
+2. Verify your identity claim by verifying you possess a secret that only the
+   "real you" would know and which had been established prior to this moment.
+   This might be a password, matching signature, [knowledge of bedroom furniture][odyssey],   etc. (**Authentication**)
+3. _Interlude_ At this point the bank knows that they are dealing with a
+   _verified entity_. From the perspective of their system, all _verified
+   entities_ act with respect to a _role_. _Roles_ can be expressed with the
+   formulation _As an_. Implicitly, at point of **Authentication** your
+   collection of _roles_ is also retrived.
+4. You then proceed to withdraw enough money for another delicious Greenleaf
+   juice. At this point the **Access Policy** ("_As an_ +owner+ of an account,
+   the +owner+ is permitted to withdraw money from that account provided that the
+   amount to withdraw does not reduce the balance to $0.00 or less") is
+   implemented in an activity known as **Authorization**.
+5. You then walk up to the vault and try to go in. Your _roles_ +owner+ and
+   +customer+ have a "NO ACCESS" policy as relates to the bank's vault. As
+   such, you will _not_ be **Authorized** and will probably earn the new role of
+   +attempted robber+.
+
+Let's apply this thinking to a web login.
 
 When you access your bank account on the web you will:
 
@@ -71,3 +85,4 @@ Over the course of this section, you will learn how to build a basic
 implementation of these four security concepts in a Ruby on Rails application.
 
 [FG]: http://www.imdb.com/title/tt0080745/
+[odyssey]: http://classics.mit.edu/Homer/odyssey.23.xxiii.html#151
