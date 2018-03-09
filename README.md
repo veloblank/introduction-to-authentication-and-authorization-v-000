@@ -80,6 +80,10 @@ what" questions as:
 * **Authorization**: Access privileges granted to a user or the act of granting
   those privileges.
 
+p.s. The above definitions above are fairly abstract, and they may not always 
+directly map to a specific framework or library functionality. Nevertheless, it's 
+important to have a general understanding of their meaning.
+
 ## Section Objectives
 
 Over the course of this section, you will learn how to build a basic
