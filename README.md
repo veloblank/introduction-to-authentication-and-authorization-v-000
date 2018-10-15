@@ -4,7 +4,7 @@
 
 Imagine you shared (by accident!) the URL to your bank’s web application. Would
 you expect that **anyone** who followed the link should be able to see that you
-bought an extremely expensive $9.50 Greenleaf Juice? We susupect that you, like
+bought an extremely expensive $9.50 Greenleaf Juice? We suspect that you, like
 us, would find that an _extremely_ undesirable outcome! Thankfully that's
 **not** how bank web applications work!
 
