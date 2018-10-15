@@ -41,7 +41,7 @@ apply.
 3. _Interlude_ At this point the bank knows that they are dealing with a
    _verified entity_. From the perspective of their system, all _verified
    entities_ act with respect to _roles_. At point of **Authentication** the
-   _verified entity's_ collection of _roles_ is _also_ retrived.
+   _verified entity's_ collection of _roles_ is _also_ retrieved.
 4. You then proceed to withdraw enough money for another delicious Greenleaf
    juice. At this point the **Access Policy** ("_As an_ `owner` of an account,
    the `owner` is permitted to withdraw money from that account provided that the
